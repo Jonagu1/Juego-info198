@@ -1,4 +1,3 @@
-# Juego-info198
 # Juego-info198- Proyecto de C++/Qt
 
 ## Introducción
@@ -8,7 +7,6 @@ Este proyecto es un juego de tablero multijugador por turnos, desarrollado en C+
 
 ## Requisitos Previos
 
-## Requisitos Previos
 
 Todos los desarrolladores deben tener **Qt 6** con **Qt Creator** instalados.
 
@@ -21,24 +19,29 @@ Todos los desarrolladores deben tener **Qt 6** con **Qt Creator** instalados.
     * Bajo `Qt 6.x.x`, marcar el compilador **MinGW x.x.x** (ej: `MinGW 13.1.0 64-bit`).
     * **Qt Creator 1x.x.x**.
 
-### Linux (Debian/Arch-based)
-
 Se deben instalar los paquetes de desarrollo de Qt 6, el compilador, las herramientas y las dependencias que faltan.
+### Linux (Debian-based/Arch-based/Fedora-based)
+
+**En sistemas Debian-based (Mint, Ubuntu):**
 
 # Instalar todas las dependencias de desarrollo de Qt
 ```bash
 sudo apt update
 sudo apt install build-essential qtcreator cmake gdb qt6-base-dev qt6-base-dev-tools qt6-tools-dev-tools libgl1-mesa-dev
-**En sistemas Debian-based (Mint, Ubuntu):**
 ```
 **En sistemas Arch-based:**
 # Instalar el compilador, el IDE, las herramienta, las librerías y dependencias de Qt 6
+
 ```bash
 sudo pacman -Syu gcc qtcreator gdb cmake
-
 sudo pacman -S qt6-base qt6-tools mesa
 ```
 
+**En sistemas Fedora-based:**
+```bash
+sudo dnf groupinstall "Development Tools"
+sudo dnf install qt-creator cmake gdb qt6-qtbase-devel qt6-qttools-devel mesa-libGL-devel
+```
 El juego utiliza un archivo .env para la configuración de la partida.
 
     Localizar el archivo .env.example en la raíz del proyecto.
