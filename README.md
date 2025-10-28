@@ -8,7 +8,9 @@ Este proyecto es un juego de tablero multijugador por turnos, desarrollado en C+
 
 ## Requisitos Previos
 
-Todos los desarrolladores deben tener `git` y **Qt 6** con **Qt Creator** instalados.
+## Requisitos Previos
+
+Todos los desarrolladores deben tener **Qt 6** con **Qt Creator** instalados.
 
 ### Windows
 
@@ -21,21 +23,21 @@ Todos los desarrolladores deben tener `git` y **Qt 6** con **Qt Creator** instal
 
 ### Linux (Debian/Arch-based)
 
-Se deben instalar los paquetes de desarrollo de Qt 6 y el compilador a través del gestor de paquetes del sistema.
+Se deben instalar los paquetes de desarrollo de Qt 6, el compilador, las herramientas y las dependencias que faltan.
 
-**En sistemas Debian-based (Mint, Ubuntu):**
+# Instalar todas las dependencias de desarrollo de Qt
 ```bash
-# Instalar herramientas de compilación y Qt 6
 sudo apt update
-sudo apt install build-essential qt6-base-dev qt6-tools-dev
+sudo apt install build-essential qtcreator cmake gdb qt6-base-dev qt6-base-dev-tools qt6-tools-dev-tools libgl1-mesa-dev
+**En sistemas Debian-based (Mint, Ubuntu):**
 ```
 **En sistemas Arch-based:**
-```
-# Instalar compilador y Qt 6
-sudo pacman -Syu gcc qt6-base qt6-tools
-```
+# Instalar el compilador, el IDE, las herramienta, las librerías y dependencias de Qt 6
+```bash
+sudo pacman -Syu gcc qtcreator gdb cmake
 
-
+sudo pacman -S qt6-base qt6-tools mesa
+```
 
 El juego utiliza un archivo .env para la configuración de la partida.
 
